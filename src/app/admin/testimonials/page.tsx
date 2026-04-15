@@ -260,7 +260,9 @@ export default function AdminTestimonials() {
                   bucket="testimonials-avatars"  // Change to your exact bucket name!
                   onUploadComplete={(url) => setAvatarUrl(url || "")}
                   currentUrl={avatarUrl}
-                  accept="image/*"
+                  accept={{
+                    'image/*': ['.jpeg', '.jpg', '.png', '.webp']
+                  }}
                   maxSizeMB={5}
                   label="Drag & drop avatar (JPG/PNG, max 5MB)"
                 />

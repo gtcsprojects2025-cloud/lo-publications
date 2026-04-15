@@ -159,11 +159,19 @@ export default function AdminTeam() {
     setSocials([...socials, { type: "instagram", url: "" }]);
   };
 
+  // const updateSocialLink = (index: number, field: "type" | "url", value: string) => {
+  //   const newSocials = [...socials];
+  //   newSocials[index][field] = value;
+  //   setSocials(newSocials);
+  // };
   const updateSocialLink = (index: number, field: "type" | "url", value: string) => {
-    const newSocials = [...socials];
-    newSocials[index][field] = value;
-    setSocials(newSocials);
-  };
+  const newSocials = [...socials];
+  
+  // Use 'as any' or 'as string' on the assignment if the types match
+  (newSocials[index][field] as string) = value;
+  
+  setSocials(newSocials);
+};
 
   const removeSocialLink = (index: number) => {
     setSocials(socials.filter((_, i) => i !== index));
