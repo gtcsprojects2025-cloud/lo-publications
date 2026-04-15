@@ -129,7 +129,7 @@ const CareerPage = () => {
         {/* Call to Action */}
         <footer className="text-center pt-10">
           <button className="bg-green-900 text-stone-50 px-10 py-4 font-sans uppercase tracking-widest text-sm hover:bg-stone-800 transition-colors">
-            To apply, kindly send your resume and cover letter to layo@lopublications.com
+            To apply, send your resume and cover letter to layo@lopublications.com
           </button>
         </footer>
 
