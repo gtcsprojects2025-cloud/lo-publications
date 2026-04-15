@@ -341,7 +341,10 @@ export default function SubmitManuscriptPage() {
                         // We'll handle this in onSubmit
                       }}
                       currentUrl={null}
-                      accept=".pdf,.doc,.docx"
+                      
+                      accept={{
+                          'image/*': ['.jpeg', '.jpg', '.png', '.webp', ' .pdf', '.doc', '.docx']
+                        }}
                       maxSizeMB={20}
                       label="Drag & drop your sample chapter (PDF, DOC, DOCX)"
                     />
