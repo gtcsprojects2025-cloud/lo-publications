@@ -270,11 +270,14 @@ export default function AdminBooks() {
 
               <div>
                 <label className="block text-gray-700 font-medium mb-2">Book Cover</label>
-                <FileDropzone
-                  bucket="book-covers"  // Change to your exact bucket name!
+                  <FileDropzone
+                  bucket="book-covers"
                   onUploadComplete={(url) => setCoverUrl(url || "")}
                   currentUrl={coverUrl}
-                  accept="image/*"
+                  // Change the string to this object structure:
+                  accept={{
+                    'image/*': ['.jpeg', '.jpg', '.png', '.webp']
+                  }}
                   maxSizeMB={5}
                   label="Drag & drop cover image (JPG/PNG)"
                 />
