@@ -12,6 +12,7 @@ const navLinks = [
   { name: "Submit Manuscript", href: "/submit" },
   { name: "Blog", href: "/blog" },
   { name: "Team", href: "/team" },
+  { name: "Careers", href: "/career" },
   { name: "Contact", href: "/contact" },
 ];
 
